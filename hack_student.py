@@ -16,7 +16,6 @@ import matplotlib.pyplot as plt
 import os
 
 df = pd.read_csv('PS25_Dataset_25.csv/PS25_Dataset_25.csv')
-
 pd.set_option('display.max_rows', None)
 print("Dataset Preview:\n")
 print(df.head())
@@ -29,23 +28,18 @@ df.drop_duplicates(inplace=True)
 df[['A','B','C','D']].mean()
 
 plt.figure()
-
 df[['A','B','C','D']].mean().plot(kind='bar'  , edgecolor = "black")
-
 plt.title("Average Comparison of A, B, C, D")
 plt.xlabel("Columns")
 plt.ylabel("Average Values")
 plt.xticks(rotation=0)
-
 plt.show()
 
 df['Total'] = df['A'] + df['B'] + df['C'] + df['D']
 df['Average'] = df['Total'] / 4
 
 plt.figure()
-
 plt.hist(df['Average'], bins=10 , edgecolor = "black")
-
 plt.title("Distribution of Average Values")
 plt.xlabel("Average")
 plt.ylabel("Frequency")
@@ -53,10 +47,8 @@ plt.ylabel("Frequency")
 plt.show()
 
 values = df[['A','B','C','D']].sum()
-
 plt.figure()
 plt.pie(values, labels=['A','B','C','D'], autopct='%1.1f%%' )
-
 plt.title("Contribution of A, B, C, D")
 plt.show()
 

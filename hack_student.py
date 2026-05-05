@@ -43,7 +43,6 @@ plt.hist(df['Average'], bins=10 , edgecolor = "black")
 plt.title("Distribution of Average Values")
 plt.xlabel("Average")
 plt.ylabel("Frequency")
-
 plt.show()
 
 values = df[['A','B','C','D']].sum()

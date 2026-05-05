@@ -13,7 +13,6 @@ uploaded = files.upload()
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-import os
 
 df = pd.read_csv('PS25_Dataset_25.csv/PS25_Dataset_25.csv')
 pd.set_option('display.max_rows', None)
